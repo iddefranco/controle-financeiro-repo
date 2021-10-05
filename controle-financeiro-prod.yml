@@ -1,0 +1,10 @@
+spring:
+ datasource:
+  url: 'jdbc:postgresql://controle-fianceiro:5432/controle-financeiro' 
+  username: postgres
+  password: 1234567
+ jpa:
+  properties: 
+   hibernate:
+    jdbc.lob.non_contextual_creation: true
+    ddl-auto: none
