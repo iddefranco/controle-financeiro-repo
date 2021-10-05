@@ -9,11 +9,11 @@ spring:
   application.name: controle-financeiro
   main:
     allow-bean-definition-overriding: true
-  zipkin.base-url: http://controle-financeiro-trace:9411
+  zipkin.base-url: http://localhost:9411
   sleuth.sampler.probability: 1.0
 
   datasource:
-    url: jdbc:postgresql://controle-financeiro-bd:5432/controle-financeiro
+    url: jdbc:postgresql://localhost:5432/controle-financeiro
     username: postgres
     password: 123456
     type: com.zaxxer.hikari.HikariDataSource
@@ -51,7 +51,7 @@ eureka:
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
   client:
     service-url:
-      defaultZone: 'http://controle-financeiro-eureka-server:8761/eureka'
+      defaultZone: 'http://localhost:8761/eureka'
 hystrix:
   command:
     default:
